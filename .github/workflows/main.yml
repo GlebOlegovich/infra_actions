@@ -75,7 +75,7 @@ jobs:
         username: ${{ secrets.USER_SERVER }}
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE_SERVER }} # Если ваш ssh-ключ защищён фразой-паролем
-        run: |
+        script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull godleib/infra_actions
           #остановка всех контейнеров
